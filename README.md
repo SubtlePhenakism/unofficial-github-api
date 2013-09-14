@@ -24,7 +24,7 @@ require 'unofficial-github-api'
 
 ### Features
 
-No more features yet. Only those, which are listed below.
+Only those, which are listed below.
 
 #### List of Followers
 
