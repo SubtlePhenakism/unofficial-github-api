@@ -1,3 +1,3 @@
 $: << File.join(File.dirname(__FILE__), '/../lib' )
 require 'rspec'
-require 'github-api'
+require 'unofficial-github-api'

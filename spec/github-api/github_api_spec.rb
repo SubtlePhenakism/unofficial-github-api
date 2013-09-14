@@ -25,7 +25,7 @@ describe 'GithubApi User' do
 
   it 'should get join date' do
     @grigorik.created_at.should == Time.new(2008,5,17, 12)
-    @max.created_at.should == Time.new(2011,10,1, 11)
+    @max.created_at.should == Time.new(2011,10,1, 12)
   end
 end
 

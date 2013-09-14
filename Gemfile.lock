@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    github-api (0.0.1)
+    unofficial-github-api (0.0.1)
 
 GEM
   remote: http://rubygems.org/
@@ -28,8 +28,8 @@ PLATFORMS
 DEPENDENCIES
   bundler
   chronic
-  github-api!
   nokogiri
   rake
   rspec
+  unofficial-github-api!
   work_queue

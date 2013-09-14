@@ -1,10 +1,26 @@
-### [Unofficial Github API](https://github.com/mac-r/github-api.git)
+### [Unofficial Github API](https://github.com/mac-r/unofficial-github-api.git)
 
 Unofficial Github API with unlimited requests and no authentication needed.
 
-    This is a preliminary release for internal review.
-    The official release will be announced later.
-    Any suggestion for modification is welcome.
+### Installation
+
+Install gem through terminal
+
+```
+gem install unofficial-github-api
+```
+
+or add to the Gemfile
+
+```ruby
+gem 'unofficial-github-api'
+```
+
+Then require the package in a file
+
+```ruby
+require 'unofficial-github-api'
+```
 
 ### Features
 
