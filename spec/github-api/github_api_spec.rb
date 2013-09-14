@@ -7,11 +7,11 @@ describe 'GithubApi User' do
   end
 
   it 'should get number of commits' do
-    @grigorik.get_number_of_commits.should == 229
+    @grigorik.commits_size.should == 229
   end
 
   it 'should get number of followers' do
-    @grigorik.get_number_of_followers.should == 2217
+    @grigorik.followers_size.should == 2217
   end
 
   it 'should get number of followers pages' do
@@ -20,12 +20,12 @@ describe 'GithubApi User' do
   end
 
   it 'should get list of followers' do
-    @max.get_list_of_followers.should == ['s0ber', 'targence', 'kossnocorp', 'Pistol92', 'denova', 'Virakocha', 'drinkius']
+    @max.followers.should == ['s0ber', 'targence', 'kossnocorp', 'Pistol92', 'denova', 'Virakocha', 'drinkius']
   end
 
   it 'should get join date' do
-    @grigorik.get_join_date.should == Time.new(2008,5,17, 12)
-    @max.get_join_date.should == Time.new(2011,10,1, 12)
+    @grigorik.created_at.should == Time.new(2008,5,17, 12)
+    @max.created_at.should == Time.new(2011,10,1, 11)
   end
 end
 

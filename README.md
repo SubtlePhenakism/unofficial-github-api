@@ -6,6 +6,50 @@ Unofficial Github API with unlimited requests and no authentication needed.
     The official release will be announced later.
     Any suggestion for modification is welcome.
 
+### Features
+
+No more features yet. Only those, which are listed below.
+
+#### List of Followers
+
+Returns a list of all followers for a specified user. Multiple threads are used.
+
+```ruby
+github_user = GithubApi::User.new('mac-r')
+
+github_user.followers # => ['s0ber', 'targence', 'kossnocorp', 'Pistol92', 'denova', 'Virakocha', 'drinkius']
+```
+
+#### Join Date
+
+Returns time, when a specified profile was created.
+
+```ruby
+github_user = GithubApi::User.new('igrigorik')
+
+github_user.created_at # => 2008-05-17 12:00:00 +0400
+```
+
+#### Number of Followers
+
+Returns number of followers for a specified user.
+
+```ruby
+github_user = GithubApi::User.new('torvalds')
+
+github_user.followers_size # => 12 567
+```
+
+#### Number of Commits
+
+Returns number of public commits for a specified user.
+
+```ruby
+github_user = GithubApi::User.new('dhh')
+
+github_user.commits_size # => 394
+```
+
 ### License
 
 The MIT License
