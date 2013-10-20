@@ -14,11 +14,11 @@ Gem::Specification.new do |gem|
   gem.require_path = 'lib'
   gem.files = Dir.glob("{lib,spec}/**/*")
   gem.required_ruby_version = '>= 1.9.3'
-  gem.add_development_dependency 'bundler'
-  gem.add_development_dependency 'rake'
-  gem.add_development_dependency 'rspec'
-  gem.add_development_dependency 'nokogiri'
-  gem.add_development_dependency 'work_queue'
-  gem.add_development_dependency 'chronic'
+  gem.add_dependency 'bundler'
+  gem.add_dependency 'rake'
+  gem.add_dependency 'rspec'
+  gem.add_dependency 'nokogiri'
+  gem.add_dependency 'work_queue'
+  gem.add_dependency 'chronic'
 
 end
