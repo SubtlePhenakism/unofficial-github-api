@@ -4,23 +4,25 @@ describe 'GithubApi User' do
   before(:all) do
     @grigorik = GithubApi::User.new('igrigorik')
     @max = GithubApi::User.new('mac-r')
+    @robert = GithubApi::User.new('SubtlePhenakism')
   end
 
   it 'should get number of commits' do
-    @grigorik.commits_size.should == 229
+    @grigorik.commits_size.should == 0
+    @robert.commits_size.should == 17
   end
 
   it 'should get number of followers' do
-    @grigorik.followers_size.should == 2217
+    @grigorik.followers_size.should == 2959
   end
 
   it 'should get number of followers pages' do
-    @grigorik.get_number_of_followers_pages.should == 44
+    @grigorik.get_number_of_followers_pages.should == 59
     @max.get_number_of_followers_pages.should == 1
   end
 
   it 'should get list of followers' do
-    @max.followers.should == ['s0ber', 'targence', 'kossnocorp', 'Pistol92', 'denova', 'Virakocha', 'drinkius']
+    @max.followers.should == ["bobuz", "attractor-bot", "SubtlePhenakism", "alexalv", "guiferrpereira", "s0ber", "targence", "Pistol92", "denova", "Virakocha", "drinkius"] 
   end
 
   it 'should get join date' do
@@ -40,11 +42,11 @@ describe 'GithubApi FollowersPage' do
   end
 
   it 'should get a nickname of the first follower' do
-    @grigorik.follower_name(1).should == 'confa'
+    @grigorik.follower_name(1).should == 'zhangyuan'
   end
 
   it 'should return followers list per page' do
-    @grigorik.followers_list.should == ['confa', 'sainavaneethan', 'nano-monkey', 'shokai', 'pid', 'pielgrzym', 'deanhume', 'mohnish', 'mdi', 'delqn', 'emohacker', 'leoj3n', 'florinbroasca', 'guypod', 'mahinshaw', 'yuyay', 'jonathanchrisp', 'xinhui', 'code6', 'riywo', 'vieten', 'hugoabonizio', 'KevinQiangK', '9minds', 'ice-melon', 'danzajdband', 'umitunal', 'technommy', 'yuanyan', 'nadavhollander', 'peterood', 'rubymerchant', 'choppen5', 'hxgdzyuyi', 'rsaccoll', 'kostyantyn', 'grauwoelfchen', 'mirosr', 'ivalkeen', 'robwilliams', 'rogerjnak', 'sdeguardi', 'wyg1258', 'waibo', 'vitoleandro', 'aaronjwood', 'samsonradu', 'jaspervalero', 'nwokeo', 'wangshijun2010', 'bradberger']
+    @grigorik.followers_list.should == ["zhangyuan", "meganemura", "dlackty", "samgranieri", "glebm", "shokr", "kuus", "irazasyed", "zuyu", "grey93", "ovis35", "Blake-C", "kewinwang", "nadiavasconcelos", "GabrielDuque5", "corangar", "elithrar", "davidyuan1989", "dynamicy", "vmitchell", "geymed", "dritter", "atishn", "emmanuelgautier", "AndrewHYi", "JoshuaJBerk", "AddaxSoft", "sergiobuj", "zzgary", "jwachter", "joginder89", "chengjun", "partloer", "akaomy", "yankuangshi", "geaden", "ricsirigu", "bharadwaj6", "soenmie", "cgyy", "openhiun", "mlarraz", "fbgt", "treble37", "ninproj", "guifreitag", "fixnum", "astroboyrgukt", "simongfxu", "SerhanKarakaya", "maheshgoheja"]
     GithubApi::FollowersPage.new('igrigorik', 1000).followers_list.should == []
   end
 end
