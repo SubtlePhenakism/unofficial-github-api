@@ -9,11 +9,10 @@ describe 'GithubApi User' do
 
   it 'should get number of commits' do
     @grigorik.commits_size.should == 0
-    @robert.commits_size.should == 17
   end
 
   it 'should get number of followers' do
-    @grigorik.followers_size.should == 2959
+    @grigorik.followers_size.should == 2961
   end
 
   it 'should get number of followers pages' do
@@ -42,11 +41,11 @@ describe 'GithubApi FollowersPage' do
   end
 
   it 'should get a nickname of the first follower' do
-    @grigorik.follower_name(1).should == 'zhangyuan'
+    @grigorik.follower_name(1).should == 'agios'
   end
 
   it 'should return followers list per page' do
-    @grigorik.followers_list.should == ["zhangyuan", "meganemura", "dlackty", "samgranieri", "glebm", "shokr", "kuus", "irazasyed", "zuyu", "grey93", "ovis35", "Blake-C", "kewinwang", "nadiavasconcelos", "GabrielDuque5", "corangar", "elithrar", "davidyuan1989", "dynamicy", "vmitchell", "geymed", "dritter", "atishn", "emmanuelgautier", "AndrewHYi", "JoshuaJBerk", "AddaxSoft", "sergiobuj", "zzgary", "jwachter", "joginder89", "chengjun", "partloer", "akaomy", "yankuangshi", "geaden", "ricsirigu", "bharadwaj6", "soenmie", "cgyy", "openhiun", "mlarraz", "fbgt", "treble37", "ninproj", "guifreitag", "fixnum", "astroboyrgukt", "simongfxu", "SerhanKarakaya", "maheshgoheja"]
+    @grigorik.followers_list.should == ["agios", "rohitnjan88", "zhangyuan", "meganemura", "dlackty", "samgranieri", "glebm", "shokr", "kuus", "irazasyed", "zuyu", "grey93", "ovis35", "Blake-C", "kewinwang", "nadiavasconcelos", "GabrielDuque5", "corangar", "elithrar", "davidyuan1989", "dynamicy", "vmitchell", "geymed", "dritter", "atishn", "emmanuelgautier", "AndrewHYi", "JoshuaJBerk", "AddaxSoft", "sergiobuj", "zzgary", "jwachter", "joginder89", "chengjun", "partloer", "akaomy", "yankuangshi", "geaden", "ricsirigu", "bharadwaj6", "soenmie", "cgyy", "openhiun", "mlarraz", "fbgt", "treble37", "ninproj", "guifreitag", "fixnum", "astroboyrgukt", "simongfxu"]
     GithubApi::FollowersPage.new('igrigorik', 1000).followers_list.should == []
   end
 end
